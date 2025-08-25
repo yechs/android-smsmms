@@ -2,9 +2,9 @@
 
 ## Notes
 
-Run `./gradlew :library:assembleRelease` to build the library.
+Run `./gradlew :library:assembleDebug` to build the library.
 
-The aar file will be in `library/build/outputs/aar/library-release.aar`. Use this to add to your project.
+The aar file will be in `library/build/outputs/aar/library-debug.aar`. Use this to add to your project.
 
 # Prior stuff
 

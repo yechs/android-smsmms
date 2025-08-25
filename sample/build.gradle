@@ -4,13 +4,13 @@ allprojects {
     repositories {
         mavenCentral()
         maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
     }
 }
 
 android {
-    namespace 'com.klinker.android.send_message.sample'
+    namespace = 'com.klinker.android.send_message.sample'
     compileSdkVersion 29
 
     defaultConfig {
@@ -29,7 +29,7 @@ android {
     }
 
     lintOptions {
-        abortOnError false
+        abortOnError = false
     }
 }
 
