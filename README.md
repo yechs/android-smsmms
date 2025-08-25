@@ -1,5 +1,13 @@
 # Android SMS/MMS Sending Library
 
+## Notes
+
+Run `./gradlew :library:assembleRelease` to build the library.
+
+The aar file will be in `library/build/outputs/aar/library-release.aar`. Use this to add to your project.
+
+# Prior stuff
+
 ![Promo](https://raw.githubusercontent.com/klinker41/android-smsmms/master/android-messaging.png)
 
 These are the APIs that Google has so far left out of the Android ecosystem for easily sending any type of message without digging through source code and what not.
