@@ -1,6 +1,8 @@
 
 package com.android.mms.transaction;
 
+import androidx.core.content.ContextCompat;
+
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -56,7 +58,13 @@ public class DownloadManager {
         mMap.put(location, receiver);
 
         // Use unique action in order to avoid cancellation of notifying download result.
-        context.getApplicationContext().registerReceiver(receiver, new IntentFilter(receiver.mAction));
+//        context.getApplicationContext().registerReceiver(receiver, new IntentFilter(receiver.mAction));
+        ContextCompat.registerReceiver(
+                context.getApplicationContext(),
+                receiver,
+                new IntentFilter(receiver.mAction),
+                ContextCompat.RECEIVER_EXPORTED
+        );
 
         Log.v(TAG, "receiving with system method");
         final String fileName = "download." + Math.abs(new Random().nextLong()) + ".dat";
